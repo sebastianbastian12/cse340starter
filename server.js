@@ -2,7 +2,6 @@
  * This server.js file is the primary file of the
  * application. It is used to control the project.
  *******************************************/
-//Haciendo una prueba con github//
 
 /* ***********************
  * Require Statements
