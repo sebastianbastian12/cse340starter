@@ -15,5 +15,5 @@ node_modules
 # .DS_Store is only for Mac users
 **/.DS_Store
 
-#README File that is not neccesary
+#README File that is not neccesary - when the file was already read by Git use -> (git rm --cached "filename")
 README.md
