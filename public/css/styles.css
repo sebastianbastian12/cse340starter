@@ -256,7 +256,7 @@ main{
 
 .DMC-delorean {
   position: absolute;
-  top: 200px;
+  top: 250px;
   left: 190px;
   padding: 25px;
 }
@@ -328,7 +328,7 @@ main{
 
 /*Big*/
 
-@media (min-width: 1025px) and (max-width: 1900px) {
+@media (min-width: 1025px) and (max-width: 2560px) {
 
 body {
     background-image: url(../images/site/small_check.jpg);
@@ -364,7 +364,7 @@ main{
 .DMC-delorean {
   position: absolute;
   top: 220px;
-  left: 290px;
+  left: 590px;
   padding:30px;
 }
 
