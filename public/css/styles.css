@@ -4,3 +4,473 @@
 *:after {
   box-sizing: border-box;
 }
+
+/*Small*/
+
+    #wrapper {
+      max-width: 800px;
+      height: 750px;
+      margin: 0px auto 50px auto;
+      background-color: white;
+    }
+  
+    #top-header {
+      display: flex;
+      justify-content: space-between;
+      margin: 12px 20px;
+    }
+  
+    .navigation_list {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .main-header {
+      font-size: 25px;
+    }
+  
+    .DMC-delorean {
+      top: 228px;
+      left: 150px;
+      padding: 20px;
+    }
+  
+    .DMC-delorean h2 {
+      color: darkturquoise;
+      margin: 0px;
+      font-size: 20px;
+    }
+  
+    .DMC-delorean ul li {
+      font-size: 20px;
+    }
+  
+    .CSEMotorsLink,
+    .MyAccountLink {
+      text-decoration: none;
+    }
+  
+    .CSEMotorsLink {
+      font-size: 20px;
+      color: rgb(90, 75, 75);
+      font-weight: bold;
+    }
+  
+    .MyAccountLink {
+      font-size: 14px;
+      color: rgb(90, 75, 75);
+    }
+  
+  
+    #top-header {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .navigation_list {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(90, 75, 75);
+      padding: 5px;
+    }
+  
+    .navigation_list li {
+      list-style-type: none;
+      color: white;
+    }
+  
+    .main-header {
+      font-size: 20px;
+      margin-bottom: 60px;
+    }
+  
+    .delorean-tn {
+      display: block;
+      margin: auto;
+      width: 200px;
+    }
+  
+    .delorean-section {
+      margin-bottom: 40px;
+    }
+  
+    .DMC-delorean {
+      background-color: rgba(255, 255, 255, .8);
+      position: absolute;
+      top: 140px;
+      left: 40px;
+      padding: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    h2 {
+      font-size: 15px;
+    }
+  
+    .DMC-delorean h2 {
+      color: darkturquoise;
+      margin: 0px;
+      font-size: 15px;
+    }
+  
+    .DMC-delorean ul {
+      padding-left: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  
+    .DMC-delorean ul li {
+      list-style-type: none;
+      color: darkturquoise;
+      font-size: 13px;
+    }
+  
+    .Own-today {
+      width: 95px;
+    }
+  
+    .DMC-reviews ul {
+      padding-left: 15px;
+    }
+  
+    .DMC-reviews ul li {
+      margin-bottom: 7px;
+      font-size: 12x !important;
+    }
+  
+    .DMC-reviews h2,
+    .delorean-upgrades h2 {
+      font-size: 18px;
+    }
+  
+    .delorean-upgrades {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    .pictures-section {
+      max-width: 300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+    }
+  
+    .picture-span,
+    .picture-span-flame,
+    .picture-span-bumper {
+      max-width: 200px;
+      display: grid;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .picture-span img {
+      display: block;
+      margin: auto;
+      width: 150px;
+      background-color: darkturquoise;
+      padding: 10px 50px;
+    }
+  
+    .picture-span-flame img {
+      display: block;
+      margin: auto;
+      width: 150px;
+      background-color: darkturquoise;
+      padding: 3.5px 50px;
+    }
+  
+    .picture-span-bumper img {
+      display: block;
+      margin: auto;
+      width: 150px;
+      background-color: darkturquoise;
+      padding: 13px 50px;
+    }
+  
+    .copyright {
+      margin: 50px 0 50px 0;
+      font-size: 12px;
+    }
+
+/*Medium*/
+
+@media (min-width: 688px) and (max-width: 1024px) {
+
+body {
+    background-image: url(../images/site/small_check.jpg);
+  }
+
+main{
+  margin-left: 20px;
+}
+
+  #wrapper {
+    max-width: 800px;
+    height: 1650px;
+    margin: 0px auto 50px auto;
+    border-color: darkturquoise;
+      border-style: solid;
+      border-width: 10px;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+  }
+
+  .CSEMotorsLink {
+    font-size: 40px;
+  }
+
+  .MyAccountLink {
+    font-size: 34px;
+  }
+
+  .navigation_list{
+    margin: 15px 20px;
+  }
+
+  .navigation_list li {
+    font-size: 35px;
+  }
+
+  .main-header {
+    font-size: 45px;
+    margin-bottom: 100px;
+  }
+
+  .DMC-reviews h2, .delorean-upgrades h2 {
+    font-size: 42px;
+  }
+
+  .DMC-reviews ul li {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+
+  .delorean-tn {
+    width: 400px;
+  }
+
+.DMC-delorean {
+  position: absolute;
+  top: 200px;
+  left: 190px;
+  padding: 25px;
+}
+
+.DMC-delorean h2 {
+  font-size: 30px;
+}
+
+
+.DMC-delorean ul li {
+  font-size: 25px;
+}
+
+.Own-today {
+  width: 145px;
+}
+
+.delorean-upgrades {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pictures-section {
+  max-width: 800px;
+  margin: 0;
+}
+.picture-span,
+.picture-span-flame,
+.picture-span-bumper {
+  max-width: 1200px;
+  display: grid;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.picture-span img {
+  width: 340px;
+  padding: 19px 100px;
+}
+
+.picture-span-flame img {
+  width: 340px;
+  padding: 2px 100px;
+}
+
+.picture-span-bumper img {
+  width: 347px;
+  padding: 21px 100px;
+}
+
+.copyright {
+  margin: 50px 0 50px 0;
+  font-size: 12px;
+}
+
+ .picture-span,
+ .picture-span-flame,
+ .picture-span-bumper a {
+  font-size: 30px;
+ }
+
+.copyright {
+  margin: 50px 0 50px 0;
+  padding: 20px;
+  font-size: 22px;
+}
+
+}
+
+/*Big*/
+
+@media (min-width: 1025px) and (max-width: 1900px) {
+
+body {
+    background-image: url(../images/site/small_check.jpg);
+  }
+main{
+  margin-left: 15px;
+}
+  #wrapper {
+    max-width: 1100px !important;
+    height: 1150px;
+    margin: 0px auto 50px auto;
+    border-color: darkturquoise;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+ .CSEMotorsLink {
+   font-size: 30px;
+ }
+
+.MyAccountLink {
+  font-size: 25px;
+}
+
+.delorean-tn {
+  width: 600px;
+}
+
+.DMC-delorean {
+  position: absolute;
+  top: 220px;
+  left: 290px;
+  padding:30px;
+}
+
+.DMC-delorean h2 {
+  color: darkturquoise;
+  margin: 0px;
+  font-size: 30px;
+}
+
+.DMC-delorean ul li {
+  font-size: 28px;
+}
+
+.Own-today {
+  width: 175px;
+}
+
+#top-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation_list {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px 10px;
+}
+
+.navigation_list li {
+  font-size: 30px;
+}
+
+.main-header {
+  font-size: 35px;
+}
+
+.DMC-reviews ul li {
+  font-size: 20px;
+}
+
+.DMC-reviews h2,
+.delorean-upgrades h2 {
+  font-size: 28px;
+}
+
+.delorean-upgrades h2{
+  text-align: center;
+}
+
+.DMC-reviews ul li {
+  font-size: 22px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+
+.pictures-section {
+  max-width: 530px;
+  margin: 0;
+}
+
+.picture-span,
+.picture-span-flame,
+.picture-span-bumper {
+  max-width: 1200px;
+  display: grid;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.picture-span img {
+  width: 250px;
+  padding: 19px 80px;
+}
+
+.picture-span-flame img {
+  width: 250px;
+  padding: 8px 80px;
+}
+
+.picture-span-bumper img {
+  width: 250px;
+  padding: 25px 80px;
+}
+
+.copyright {
+  margin: 50px 0 50px 0;
+  font-size: 12px;
+}
+
+.picture-span,
+.picture-span-flame,
+.picture-span-bumper a {
+  font-size: 25px;
+}
+
+.delorean-section_2{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+.copyright {
+  margin: 50px 0 50px 0;
+  padding: 20px;
+  font-size: 22px;
+}
+
+}
+
