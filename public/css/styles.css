@@ -74,11 +74,15 @@
       padding: 5px;
     }
   
-    .navigation_list li {
-      list-style-type: none;
+    .navigation_list li a {
+      text-decoration: none;
       color: white;
     }
-  
+
+    .navigation_list li {
+      list-style-type: none;
+    }
+
     .main-header {
       font-size: 20px;
       margin-bottom: 60px;
@@ -192,6 +196,46 @@
       margin: 50px 0 50px 0;
       font-size: 12px;
     }
+/*Small - Inventory Section*/
+#inv-display{
+  text-align: center;
+  list-style: none;
+}
+
+#inv-display li {
+  border: 1px solid #ccc;
+  width: 250px;
+  text-align: center;
+  margin: 16px 16px 35px 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+#inv-display li img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px 8px 0px 0px;
+}
+
+#inv-display li a {
+ display: block;
+ color: blue;
+ font-size: 1.2em;
+}
+
+.namePrice{
+  color: black;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+#inv-display li hr {
+  border: 0;
+  height: 3px;
+  background-color: #000;
+  margin: 8px 0;
+}
+
 
 /*Medium*/
 
@@ -317,6 +361,13 @@ main{
   margin: 50px 0 50px 0;
   padding: 20px;
   font-size: 22px;
+}
+
+/*Medium - Inventory Section*/
+#inv-display {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 }
@@ -461,6 +512,13 @@ margin-right: 40px;
   margin: 50px 0 50px 0;
   padding: 20px;
   font-size: 22px;
+}
+
+/*Big - Inventory Section*/
+#inv-display {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 }
