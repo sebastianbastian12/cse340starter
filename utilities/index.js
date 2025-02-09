@@ -24,6 +24,13 @@ Util.getNav = async function (req, res, next) {
   return list;
 };
 
+/* ****************************************
+ * Middleware For Handling Errors
+ * Wrap other function in this for 
+ * General Error Handling
+ **************************************** */
+Util.handleErrors = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next)
+
 module.exports = Util;
 
 /* **************************************
@@ -58,3 +65,48 @@ Util.buildClassificationGrid = async function(data){
   }
   return grid
 }
+
+/* **************************************
+* Build the vehicle view HTML
+* ************************************ */
+
+Util.buildInvIdItem = async function(data){
+  let item = '';
+  if (data.length > 0) {
+    data.forEach(vehicle => {
+      item += '<h1>'+ vehicle.inv_year +' ' + vehicle.inv_make +' ' + vehicle.inv_model +'</h1>'
+      item += '<div class="item-container">'
+      item += '<div>'
+      item +=
+        '<img class="image-vehicle_view" src="' +
+        vehicle.inv_image +
+        '" alt="Image of ' +
+        vehicle.inv_make +
+        ' ' +
+        vehicle.inv_model +
+        ' on CSE Motors"/></div>';
+      item += '<div>'
+      item += '<h2 class="h2-vehicle_view">' + vehicle.inv_make +' ' + 'Details' + '</h2>'
+      item += '<span class="span-vehicle_price">Price: $' + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</span><br>'
+      item +=
+        '<br><span class="span-vehicle"><strong>Description:</strong>' +
+        vehicle.inv_description +
+        '</span><br>';
+      item +=
+        '<br><span class="span-vehicle"><strong>Color:</strong>' +
+        vehicle.inv_color +
+        '</span><br>';
+      item +=
+        '<br><span class="span-vehicle"><strong>Miles:</strong>' +
+        new Intl.NumberFormat('en-US').format(vehicle.inv_miles) +
+        '</span><br>';
+      item += '</div>'
+      item += '</div>'
+    });
+
+  } else { 
+    item += '<p class="notice">Sorry, no matching vehicles could be found.</p>'
+  }
+  return item
+}
+

@@ -9,8 +9,8 @@
 
     #wrapper {
       max-width: 800px;
-      height: 750px;
-      margin: 0px auto 50px auto;
+      height: auto;
+      margin: 0px auto 30px auto;
       background-color: white;
     }
   
@@ -193,13 +193,19 @@
     }
   
     .copyright {
-      margin: 50px 0 50px 0;
+      margin: 50px 0 0px 0;
       font-size: 12px;
     }
 /*Small - Inventory Section*/
 #inv-display{
   text-align: center;
   list-style: none;
+}
+
+/*Small - Error Container*/
+
+.errorContainer{
+  display: flex;
 }
 
 #inv-display li {
@@ -236,6 +242,25 @@
   margin: 8px 0;
 }
 
+/*small vehicle view*/
+
+.image-vehicle_view{
+  max-width: 100%;
+}
+
+.span-vehicle_price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.span-vehicle{
+  font-size: 20px;
+}
+
+.h2-vehicle_view{
+  font-size: 28px;
+}
+
 
 /*Medium*/
 
@@ -251,7 +276,6 @@ main{
 
   #wrapper {
     max-width: 800px;
-    height: 1650px;
     margin: 0px auto 50px auto;
     border-color: darkturquoise;
     border-style: solid;
@@ -347,7 +371,7 @@ main{
 }
 
 .copyright {
-  margin: 50px 0 50px 0;
+  margin: 50px 0 0px 0;
   font-size: 12px;
 }
 
@@ -358,8 +382,7 @@ main{
  }
 
 .copyright {
-  margin: 50px 0 50px 0;
-  padding: 20px;
+  margin: 50px 0 0px 0;
   font-size: 22px;
 }
 
@@ -368,6 +391,29 @@ main{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+/*Medium vehicle view*/
+
+.item-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-container > div {
+  flex: 1;
+}
+
+.image-vehicle_view{
+  max-width: 300px;
+  height: auto;
+}
+
+/*Medium footer*/
+.copyright-container {
+  margin: 0 0 12px 12px;
 }
 
 }
@@ -384,7 +430,6 @@ main{
 }
   #wrapper {
     max-width: 1100px !important;
-    height: 1150px;
     margin: 0px auto 50px auto;
     border-color: darkturquoise;
     border-style: solid;
@@ -492,7 +537,7 @@ main{
 }
 
 .copyright {
-  margin: 50px 0 50px 0;
+  margin: 50px 0 0px 0;
   font-size: 12px;
 }
 
@@ -509,8 +554,7 @@ margin-right: 40px;
 }
 
 .copyright {
-  margin: 50px 0 50px 0;
-  padding: 20px;
+  margin: 50px 0 0px 0;
   font-size: 22px;
 }
 
@@ -519,6 +563,28 @@ margin-right: 40px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+/*Big vehicle view*/
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.item-container>div {
+  flex: 1;
+}
+
+.image-vehicle_view {
+  max-width: 450px;
+  height: auto;
+}
+
+/*Medium footer*/
+.copyright-container {
+  margin: 0 0 12px 12px;
 }
 
 }
