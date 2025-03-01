@@ -128,6 +128,7 @@ async function addInventory (req, res) {
     inv_price,
     inv_miles,
     inv_color,
+    classification_id
   } = req.body;
 
   const regResult = await invModel.addInventoryDB(
@@ -140,6 +141,7 @@ async function addInventory (req, res) {
     inv_price,
     inv_miles,
     inv_color,
+    classification_id
   );
 
   console.log("Mensaje de consola 3" + regResult);
