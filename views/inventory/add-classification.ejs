@@ -1,0 +1,41 @@
+<% if (title) { %>
+<h1><%= title %></h1>
+<% } else {
+  res.redirect('/')
+} %>
+
+<%- messages() %>
+
+<% if (errors) { %>
+  <ul class="notice-add-classification">
+ <% errors.array().forEach(error => { %>
+   <li><%= error.msg %></li>
+<%  }) %>
+ </ul>
+<% } %>
+
+
+<div class="registration-page">
+    <p class="registration-page-title">FIELD IS REQUIRED</p>
+    <form class="form" action="/inv/add-classification" method="post">
+        <fieldset>
+            <div class="form-addclassification-group">
+                <label for="classification-name">Classification Name</label>
+                <p class="classification-requirements">NAME MUST BE ALPHABETIC CHARACTERS ONLY.</p>
+                <input type="text" id="classification-name" name="classification_name" pattern="[a-zA-Z]+$" required value="<%= locals.classification_name %>">
+            </div>
+            <button type="submit" class="register-button">Add Classification</button>
+        </fieldset>
+    </form>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        document.querySelectorAll("ul.notice-add-classification li").forEach(li =>{
+            if(li.textContent.trim() === "Invalid value"){
+                li.style.display = "none";
+            }
+         })
+    })
+</script>

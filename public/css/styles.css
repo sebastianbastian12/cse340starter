@@ -7,195 +7,195 @@
 
 /*Small*/
 
-    #wrapper {
-      max-width: 800px;
-      height: auto;
-      margin: 0px auto 30px auto;
-      background-color: white;
-    }
-  
-    #top-header {
-      display: flex;
-      justify-content: space-between;
-      margin: 12px 20px;
-    }
-  
-    .navigation_list {
-      display: flex;
-      justify-content: space-around;
-    }
-  
-    .main-header {
-      font-size: 25px;
-    }
-  
-    .DMC-delorean {
-      top: 228px;
-      left: 150px;
-      padding: 20px;
-    }
-  
-    .DMC-delorean h2 {
-      color: darkturquoise;
-      margin: 0px;
-      font-size: 20px;
-    }
-  
-    .DMC-delorean ul li {
-      font-size: 20px;
-    }
-  
-    .CSEMotorsLink,
-    .MyAccountLink {
-      text-decoration: none;
-    }
-  
-    .CSEMotorsLink {
-      font-size: 20px;
-      color: rgb(90, 75, 75);
-      font-weight: bold;
-    }
-  
-    .MyAccountLink {
-      font-size: 14px;
-      color: rgb(90, 75, 75);
-    }
-  
-  
-    #top-header {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    .navigation_list {
-      display: flex;
-      justify-content: space-between;
-      background-color: rgb(90, 75, 75);
-      padding: 5px;
-    }
-  
-    .navigation_list li a {
-      text-decoration: none;
-      color: white;
-    }
+#wrapper {
+  max-width: 800px;
+  height: auto;
+  margin: 0px auto 30px auto;
+  background-color: white;
+}
 
-    .navigation_list li {
-      list-style-type: none;
-    }
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 20px;
+}
 
-    .main-header {
-      font-size: 20px;
-      margin-bottom: 60px;
-    }
-  
-    .delorean-tn {
-      display: block;
-      margin: auto;
-      width: 200px;
-    }
-  
-    .delorean-section {
-      margin-bottom: 40px;
-    }
-  
-    .DMC-delorean {
-      background-color: rgba(255, 255, 255, .8);
-      position: absolute;
-      top: 140px;
-      left: 40px;
-      padding: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-  
-    h2 {
-      font-size: 15px;
-    }
-  
-    .DMC-delorean h2 {
-      color: darkturquoise;
-      margin: 0px;
-      font-size: 15px;
-    }
-  
-    .DMC-delorean ul {
-      padding-left: 0px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-  
-    .DMC-delorean ul li {
-      list-style-type: none;
-      color: darkturquoise;
-      font-size: 13px;
-    }
-  
-    .Own-today {
-      width: 95px;
-    }
-  
-    .DMC-reviews ul {
-      padding-left: 15px;
-    }
-  
-    .DMC-reviews ul li {
-      margin-bottom: 7px;
-    }
-  
-    .DMC-reviews h2,
-    .delorean-upgrades h2 {
-      font-size: 18px;
-    }
-  
-    .delorean-upgrades {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-  
-    .pictures-section {
-      max-width: 300px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 5px;
-    }
-  
-    .picture-span,
-    .picture-span-flame,
-    .picture-span-bumper {
-      max-width: 200px;
-      display: grid;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-  
-    .picture-span img {
-      display: block;
-      margin: auto;
-      width: 150px;
-      background-color: darkturquoise;
-      padding: 10px 50px;
-    }
-  
-    .picture-span-flame img {
-      display: block;
-      margin: auto;
-      width: 150px;
-      background-color: darkturquoise;
-      padding: 3.5px 50px;
-    }
-  
-    .picture-span-bumper img {
-      display: block;
-      margin: auto;
-      width: 150px;
-      background-color: darkturquoise;
-      padding: 13px 50px;
-    }
-  
-    .copyright {
-      margin: 50px 0 0px 0;
-      font-size: 12px;
-    }
+.navigation_list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-header {
+  font-size: 25px;
+}
+
+.DMC-delorean {
+  top: 228px;
+  left: 150px;
+  padding: 20px;
+}
+
+.DMC-delorean h2 {
+  color: darkturquoise;
+  margin: 0px;
+  font-size: 20px;
+}
+
+.DMC-delorean ul li {
+  font-size: 20px;
+}
+
+.CSEMotorsLink,
+.MyAccountLink {
+  text-decoration: none;
+}
+
+.CSEMotorsLink {
+  font-size: 20px;
+  color: rgb(90, 75, 75);
+  font-weight: bold;
+}
+
+.MyAccountLink {
+  font-size: 14px;
+  color: rgb(90, 75, 75);
+}
+
+
+#top-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation_list {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(90, 75, 75);
+  padding: 5px;
+}
+
+.navigation_list li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation_list li {
+  list-style-type: none;
+}
+
+.main-header {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.delorean-tn {
+  display: block;
+  margin: auto;
+  width: 200px;
+}
+
+.delorean-section {
+  margin-bottom: 40px;
+}
+
+.DMC-delorean {
+  background-color: rgba(255, 255, 255, .8);
+  position: absolute;
+  top: 140px;
+  left: 40px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 15px;
+}
+
+.DMC-delorean h2 {
+  color: darkturquoise;
+  margin: 0px;
+  font-size: 15px;
+}
+
+.DMC-delorean ul {
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.DMC-delorean ul li {
+  list-style-type: none;
+  color: darkturquoise;
+  font-size: 13px;
+}
+
+.Own-today {
+  width: 95px;
+}
+
+.DMC-reviews ul {
+  padding-left: 15px;
+}
+
+.DMC-reviews ul li {
+  margin-bottom: 7px;
+}
+
+.DMC-reviews h2,
+.delorean-upgrades h2 {
+  font-size: 18px;
+}
+
+.delorean-upgrades {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pictures-section {
+  max-width: 300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.picture-span,
+.picture-span-flame,
+.picture-span-bumper {
+  max-width: 200px;
+  display: grid;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.picture-span img {
+  display: block;
+  margin: auto;
+  width: 150px;
+  background-color: darkturquoise;
+  padding: 10px 50px;
+}
+
+.picture-span-flame img {
+  display: block;
+  margin: auto;
+  width: 150px;
+  background-color: darkturquoise;
+  padding: 3.5px 50px;
+}
+
+.picture-span-bumper img {
+  display: block;
+  margin: auto;
+  width: 150px;
+  background-color: darkturquoise;
+  padding: 13px 50px;
+}
+
+.copyright {
+  margin: 50px 0 0px 0;
+  font-size: 12px;
+}
 /*Small - Inventory Section*/
 #inv-display{
   text-align: center;
@@ -261,6 +261,162 @@
   font-size: 28px;
 }
 
+/*Small Login - Form*/
+form{
+  background-color: #00aaff;
+  border-radius: 5px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login-form{
+  padding: 20px;
+}
+
+form input[type="text"], form input[type="email"], form input[type="password"]{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+form label{
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form .password-requirements{
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+form .show-password{
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+form .login-button{
+  background-color: #ccc;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+form .signup-link{
+  display: block;
+  color: #f0eded;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+form .signup-link a {
+  font-size: 20px;
+  color: #00aaff;
+  text-decoration: none;
+}
+
+/*Small registration form*/
+.registration-page{
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 3px;
+  background-color: #00aaff;
+  display: block;
+  margin: auto;
+}
+
+.registration-page-title{
+  font-family: serif;
+  font-size: 20px;
+  text-align: left;
+}
+
+input:required:invalid,
+input:focus:invalid {
+  background-image: url(/images/invalid.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+input:required:valid {
+  background-image: url(/images/valid.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+/*Flash message*/
+
+.notice-add-inventory, .notice li {
+  list-style: none;
+}
+
+.notice-login, .notice-registration, .notice-add-classification, .notice-add-inventory, .notice{
+  background-color: bisque;
+  padding: 20px;
+  max-width: 550px;
+  border-radius: 5px;
+}
+
+.notice-login, .notice-registration, .notice-add-classification, .notice-add-inventory, .notice li{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+max-width: max-content;
+color: #ac5d5d;
+}
+
+.notice-login, .notice-add-classification  li:nth-child(odd) {
+  display: none;
+}
+
+.notice-registration li:nth-child(even){
+  display: none;
+}
+
+.notice-login, .notice-add-classification li:nth-child(even) {
+  margin: 0 0 10px 10px;
+}
+
+.notice-registration li:nth-child(odd) {
+  margin: 0 0 10px 10px;
+}
+
+.notice-add-classification li:nth-child(4) {
+  display: block;
+}
+
+/*Small Add classification View*/
+
+.classification-requirements {
+  font-family: sans-serif;
+  font-size: 12.5px;
+  font-weight: bolder;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/*Small add inventory view*/
+
+select, .detail{
+  padding: 10px;
+  border: none;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] .register-button{
+  cursor: pointer;
+}
 
 /*Medium*/
 
@@ -416,6 +572,12 @@ main{
   margin: 0 0 12px 12px;
 }
 
+}
+
+/*Medium form*/
+
+form {
+  max-width: 350px;
 }
 
 /*Big*/
@@ -582,9 +744,14 @@ margin-right: 40px;
   height: auto;
 }
 
-/*Medium footer*/
+/*Big footer*/
 .copyright-container {
   margin: 0 0 12px 12px;
+}
+
+/*Big form*/
+form {
+  max-width: 350px;
 }
 
 }

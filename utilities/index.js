@@ -31,8 +31,6 @@ Util.getNav = async function (req, res, next) {
  **************************************** */
 Util.handleErrors = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next)
 
-module.exports = Util;
-
 /* **************************************
 * Build the classification view HTML
 * ************************************ */
@@ -72,6 +70,7 @@ Util.buildClassificationGrid = async function(data){
 
 Util.buildInvIdItem = async function(data){
   let item = '';
+  item += '<title>' + 'Vechicle Description'+ '</title>';
   if (data.length > 0) {
     data.forEach(vehicle => {
       item += '<h1>'+ vehicle.inv_year +' ' + vehicle.inv_make +' ' + vehicle.inv_model +'</h1>'
@@ -110,3 +109,29 @@ Util.buildInvIdItem = async function(data){
   return item
 }
 
+
+/* **************************************
+* Build the list classification view HTML
+* ************************************ */
+
+Util.buildClassificationList = async function (classification_id = null) {
+  let data = await invModel.getClassifications();
+  let classificationList =
+    '<select class="detail" name="classification_id" id="classificationList" required>';
+  classificationList += "<option value=''>Choose a Classification</option>";
+  data.rows.forEach((row) => {
+    classificationList += '<option value="' + row.classification_id + '"';
+    if (
+      classification_id != null &&
+      row.classification_id == classification_id
+    ) {
+      classificationList += ' selected ';
+    }
+    classificationList += '>' + row.classification_name + '</option>';
+  });
+  classificationList += '</select>';
+  return classificationList;
+};
+
+
+module.exports = Util;
