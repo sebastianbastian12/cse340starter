@@ -22,7 +22,7 @@
     <input type="email" id="email" name="account_email" placeholder="Email" required value="<%= locals.account_email %>">
 
     <label for="password">Password *</label>
-    <input type="password" id="password" name="account_password" placeholder="Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*s).{12,}$">
+    <input type="password" id="password" name="account_password" placeholder="Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{12,}$">
 
     <button class="show-password" type="button">Show Password</button><br>
     <p class="password-requirements">Passwords must be at least 12 characters and include 1 capital letter, 1 number, and 1 special character.</p>

@@ -13,7 +13,7 @@ router.post(
   regValidate.checkRegData,
   utilities.handleErrors(accountController.registerAccount));
   
-router.get('/', utilities.handleErrors(accountController.buildSuccessLogView));
+router.get('/', utilities.checkLogin, utilities.handleErrors(accountController.buildSuccessLogView));
 
 router.post(
   "/login",

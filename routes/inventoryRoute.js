@@ -1,7 +1,7 @@
 // Needed Resources
 const express = require('express');
 const router = new express.Router();
-const {invCont, buildVehicleManagement, buildAddClassificationView, addClassification, buildAddInventoryView, addInventory} = require('../controllers/invController');
+const {invCont, buildVehicleManagement, buildAddClassificationView, addClassification, buildAddInventoryView, addInventory, updateInventory, deleteInventory} = require('../controllers/invController');
 const utilities = require('../utilities');
 const regValidate = require('../utilities/inventory-validation');
 
@@ -20,6 +20,16 @@ router.post(
   utilities.handleErrors(addInventory)
 );
 
+router.get(
+  '/getInventory/:classification_id',
+  utilities.handleErrors(invCont.getInventoryJSON)
+);
+
+router.get('/edit/:inv_id', utilities.handleErrors(invCont.editInventoryView));
+router.get('/delete/:inv_id', utilities.handleErrors(invCont.deleteInventoryView));
+
+router.post('/update/', regValidate.addInventoryRules(), regValidate.checkUpdateData, utilities.handleErrors(updateInventory));
+router.post('/delete', utilities.handleErrors(deleteInventory));
 
 
 module.exports = router;
