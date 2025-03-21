@@ -29,7 +29,7 @@ router.get('/edit/:inv_id', utilities.handleErrors(invCont.editInventoryView));
 router.get('/delete/:inv_id', utilities.handleErrors(invCont.deleteInventoryView));
 
 router.post('/update/', regValidate.addInventoryRules(), regValidate.checkUpdateData, utilities.handleErrors(updateInventory));
-router.post('/delete', utilities.handleErrors(deleteInventory));
+router.post('/delete/', utilities.handleErrors(invCont.deleteInventory));
 
 
 module.exports = router;

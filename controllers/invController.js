@@ -296,9 +296,9 @@ invCont.deleteInventoryView = async function (req, res, next) {
 /* ***************************
  *  Delete Inventory Data
  * ************************** */
-async function deleteInventory(req, res, next){
+ invCont.deleteInventory = async function(req, res, next){
   let nav = await utilities.getNav();
-  const inv_id = parseInt(req.body.inv_id);
+  const {inv_id, inv_make, inv_model} = req.body;
   const updateResult = await invModel.deleteInventoryItem(inv_id);
 
   if (updateResult) {
@@ -311,9 +311,10 @@ async function deleteInventory(req, res, next){
     res.status(501).render('inv/delete-confirm/inv_id', {
       title: 'Edit ' + itemName,
       nav,
-      classificationSelect: classificationSelect,
       errors: null,
       inv_id,
+      inv_make,
+      inv_model
     });
   }
 }
@@ -327,5 +328,4 @@ module.exports = {
   buildAddInventoryView,
   addInventory,
   updateInventory,
-  deleteInventory
 };
