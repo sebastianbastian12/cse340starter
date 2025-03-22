@@ -285,6 +285,7 @@ invCont.deleteInventoryView = async function (req, res, next) {
     title: "Delete " + itemName,
     nav,
     errors: null,
+    inv_id: itemData.inv_id,
     inv_make: itemData.inv_make,
     inv_model: itemData.inv_model,
     inv_year: itemData.inv_year,
@@ -303,7 +304,7 @@ invCont.deleteInventoryView = async function (req, res, next) {
 
   if (updateResult) {
     const itemName = updateResult.inv_make + ' ' + updateResult.inv_model;
-    req.flash('notice', `The ${itemName} was successfully deleted.`);
+    req.flash('notice', `The item was successfully deleted.`);
     res.redirect('/inv');
   } else {
     const itemName = `${inv_make} ${inv_model}`;
