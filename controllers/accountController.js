@@ -32,13 +32,20 @@ async function buildRegister(req, res, next) {
  *  Deliver Log Success view
  * *************************************** */
 async function buildSuccessLogView(req, res, next) {
-  let nav = await utilities.getNav();
-  res.render('account/management', {
-    title: 'Account Management',
-    nav,
-    errors: null,
-  });
-}
+  try{
+    const accountData = res.locals.accountData;
+    let nav = await utilities.getNav();
+    res.render("account/account-management", {
+      title: "Account Management",
+      nav,
+      accountData,
+      account_type: accountData.account_type,
+      error: null,
+    });
+  } catch(error) {
+    next(error);
+  }
+};
 
 /****************************************
  *  Process Registration
@@ -119,7 +126,15 @@ async function accountLogin(req, res) {
     if (await bcrypt.compare(account_password, accountData.account_password)) {
       console.log('Testing the fuction');
       delete accountData.account_password
-      const accessToken = jwt.sign(accountData, process.env.ACCESS_TOKEN_SECRET, { expiresIn: 3600 * 1000 })
+      const accessToken = jwt.sign (
+        {
+          account_id: accountData.account_id,
+          account_firstname: accountData.account_firstname,
+          account_type: accountData.account_type,
+        },
+      process.env.ACCESS_TOKEN_SECRET,
+      {expiresIn: 3600 * 1000}
+      );
       if(process.env.NODE_ENV === 'development') {
         res.cookie("jwt", accessToken, { httpOnly: true, maxAge: 3600 * 1000 })
       } else {
@@ -141,10 +156,79 @@ async function accountLogin(req, res) {
   }
 }
 
+
+async function accountLogout (req, res, next) {
+  res.clearCookie("jwt")
+  req.flash("message notice", "You have been logged out.")
+  res.redirect("/account/login")
+}
+
+async function buildUpdateView (req, res, next) {
+  try {
+    const account_id = parseInt(req.params.account_id);
+    let nav = await utilities.getNav();
+    const accountData = await accountModel.getAccountById(account_id);
+      
+
+      if (!accountData){
+        res.flash("Message notice", "Account not found");
+        return res.redirect("/account/")
+      }
+      res.render("account/update-account", {
+        title: "Update Account",
+        nav,
+        accountData,
+        errors: null,
+      });
+  } catch (error) {
+    next(error);
+  }
+};
+
+async function updateAccount (req, res, next) {
+  try {
+    const {
+      account_id,
+      account_firstname,
+      account_lastname,
+      account_email
+    } = req.body;
+
+  const updateResult = await accountModel.updateAccount (
+    account_id,
+    account_firstname,
+    account_lastname,
+    account_email
+  );
+
+  if (updateResult){
+    if (res.locals.accountData.account_id == account_id) {
+      res.locals.accountData.account_firstname = account_firstname;
+      res.locals.accountData.account_lastname = account_lastname;
+      res.locals.accountData.account_email = account_email;
+    }
+
+    req.flash("Message notice", "Account updated successfully!");
+    res.redirect("/account/");
+
+  } else {
+    res.flash("Message notice", "Sorry, the update failed.");
+    res.redirect(`/account/update/${account_id}`);
+  }
+  } catch (error) {
+    next(error);
+  }
+}
+
+
+
 module.exports = {
   buildLogin,
   buildRegister,
   registerAccount,
   accountLogin,
   buildSuccessLogView,
+  accountLogout,
+  buildUpdateView,
+  updateAccount
 };

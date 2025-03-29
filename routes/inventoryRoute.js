@@ -1,20 +1,21 @@
 // Needed Resources
 const express = require('express');
 const router = new express.Router();
-const {invCont, buildVehicleManagement, buildAddClassificationView, addClassification, buildAddInventoryView, addInventory, updateInventory, deleteInventory} = require('../controllers/invController');
+const {invCont, buildVehicleManagement, buildAddClassificationView, addClassification, buildAddInventoryView, addInventory, updateInventory} = require('../controllers/invController');
 const utilities = require('../utilities');
 const regValidate = require('../utilities/inventory-validation');
 
 // Route to build inventory by classification view
 router.get("/type/:classificationId", invCont.buildByClassificationId);
 router.get("/detail/:inv_id", invCont.buildByInvId);
-router.get("/", buildVehicleManagement);
-router.get("/add-classification", buildAddClassificationView);
-router.get("/add-inventory", buildAddInventoryView);
 
-router.post("/add-classification", regValidate.addClassificationRules(), regValidate.checkClassificationData, utilities.handleErrors(addClassification));
+router.get("/management", utilities.checkLogin, utilities.checkAccountType, buildVehicleManagement);
+router.get("/add-classification", utilities.checkLogin, utilities.checkAccountType, buildAddClassificationView);
+router.get("/add-inventory",utilities.checkLogin, utilities.checkAccountType, buildAddInventoryView);
+
+router.post("/add-classification", utilities.checkLogin, utilities.checkAccountType, regValidate.addClassificationRules(), regValidate.checkClassificationData, utilities.handleErrors(addClassification));
 router.post(
-  '/add-inventory',
+  '/add-inventory', utilities.checkLogin, utilities.checkAccountType,
   regValidate.addInventoryRules(),
   regValidate.checkInventoryData,
   utilities.handleErrors(addInventory)
@@ -25,11 +26,11 @@ router.get(
   utilities.handleErrors(invCont.getInventoryJSON)
 );
 
-router.get('/edit/:inv_id', utilities.handleErrors(invCont.editInventoryView));
-router.get('/delete/:inv_id', utilities.handleErrors(invCont.deleteInventoryView));
+router.get('/edit/:inv_id', utilities.checkLogin, utilities.checkAccountType, utilities.handleErrors(invCont.editInventoryView));
+router.get('/delete/:inv_id', utilities.checkLogin, utilities.checkAccountType, utilities.handleErrors(invCont.deleteInventoryView));
 
-router.post('/update/', regValidate.addInventoryRules(), regValidate.checkUpdateData, utilities.handleErrors(updateInventory));
-router.post('/delete/', utilities.handleErrors(invCont.deleteInventory));
+router.post('/update/', utilities.checkLogin, utilities.checkAccountType, regValidate.addInventoryRules(), regValidate.checkUpdateData, utilities.handleErrors(updateInventory));
+router.post('/delete/', utilities.checkLogin, utilities.checkAccountType, utilities.handleErrors(invCont.deleteInventory));
 
 
 module.exports = router;

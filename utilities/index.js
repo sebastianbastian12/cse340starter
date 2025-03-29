@@ -140,24 +140,26 @@ Util.buildClassificationList = async function (classification_id = null) {
 * Middleware to check token validity
 **************************************** */
 Util.checkJWTToken = (req, res, next) => {
- if (req.cookies.jwt) {
-  jwt.verify(
-   req.cookies.jwt,
-   process.env.ACCESS_TOKEN_SECRET,
-   function (err, accountData) {
-    if (err) {
-     req.flash("Please log in")
-     res.clearCookie("jwt")
-     return res.redirect("/account/login")
-    }
-    res.locals.accountData = accountData
-    res.locals.loggedin = 1
-    next()
-   })
- } else {
-  next()
- }
-}
+  if (req.cookies.jwt){
+    jwt.verify(
+      req.cookies.jwt,
+      process.env.ACCESS_TOKEN_SECRET,
+      function(err, accountData){
+        if(err){
+          req.flash("messaje notice", "Please log in");
+          res.clearCookie("jwt");
+          return res.redirect("/account/login");
+        }
+        res.locals.accountData = accountData;
+        res.locals.loggedin = true;
+        next();
+      }
+    );
+  } else {
+    res.locals.loggedin = false;
+    next();
+  }
+};
 
 /* ****************************************
  *  Check Login
@@ -171,5 +173,30 @@ Util.checkJWTToken = (req, res, next) => {
   }
  }
 
+Util.checkAccountType = (req, res, next) => {
+  if (!req.cookies.jwt) {
+    req.flash("Message notice", "Please log in first.");
+    return res.redirect("/account/login");
+  }
+  jwt.verify(
+    req.cookies.jwt,
+    process.env.ACCESS_TOKEN_SECRET,
+    (err, decoded) => {
+      if (err){
+        req.flash("Message notice", "Session expired. Please log in again.");
+        res.clearCookie("jwt");
+        return res.redirect("/account/login");
+      }
+      console.log("Decoded account typeL:", decoded.account_type);
+      if (!["Admin", "Employee"].includes(decoded.account_type)){
+        req.flash("Message notice", "Access denied: You must be an Admin or Employee user.");
+        return res.redirect("/account/login");
+      }
+      res.locals.accountData = decoded;
+      res.locals.loggedin = true;
+      next();
+    }
+  );
+};
 
 module.exports = Util;

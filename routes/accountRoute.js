@@ -22,7 +22,10 @@ router.post(
   utilities.handleErrors(accountController.accountLogin)
 );
 
+router.get("/logout", utilities.handleErrors(accountController.accountLogout));
 
+router.get("/update/:account_id", utilities.checkLogin, utilities.handleErrors(accountController.buildUpdateView));
 
+router.post("/update", utilities.checkLogin, utilities.handleErrors(accountController.updateAccount));
 
 module.exports = router;
