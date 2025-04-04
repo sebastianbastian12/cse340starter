@@ -470,10 +470,6 @@ input[type="submit"] .register-button{
   margin-bottom: 4px;
   list-style-type: disc;
 }
-.services-list li::before {
-  content: 🚗;
-  margin-right: 8px;
-}
 
 .new-search{
   display: block;
