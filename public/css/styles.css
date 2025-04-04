@@ -485,7 +485,7 @@ input[type="submit"] .register-button{
   font-family: arial, sans-serif;
   color: #333;
   font-weight: bold;
-  max-width: 15%;
+  max-width: 35%;
 }
 
 .pointer {
@@ -645,6 +645,10 @@ main{
 /*Medium footer*/
 .copyright-container {
   margin: 0 0 12px 12px;
+}
+
+.new-search {
+  max-width: 25%;
 }
 
 }
@@ -827,6 +831,10 @@ margin-right: 40px;
 /*Big form*/
 form {
   max-width: 350px;
+}
+
+.new-search {
+  max-width: 15%;
 }
 
 }
