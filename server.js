@@ -13,6 +13,7 @@ const app = express();
 const static = require('./routes/static');
 const inventoryRoute = require('./routes/inventoryRoute');
 const accountRoute = require('./routes/accountRoute');
+const workshopsRoute = require('./routes/workshopsRoute');
 const utilities = require('./utilities/');
 const session = require('express-session');
 const pool = require('./database/');
@@ -70,6 +71,9 @@ app.use("/inv", inventoryRoute)
 
 // Account routes
 app.use("/account", accountRoute)
+
+// Workshops routes
+app.use("/workshops", workshopsRoute)
 
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {

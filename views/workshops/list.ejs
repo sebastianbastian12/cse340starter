@@ -1,0 +1,43 @@
+<% if (title) { %>
+  <h1><%= title %></h1>
+<% } else {
+  res.redirect('/')
+} %>
+<%- messages() %>
+
+<% if (errors) { %>
+  <ul class="notice-login">
+ <% errors.array().forEach(error => { %>
+   <li><%= error.msg %></li>
+<%  }) %>
+ </ul>
+<% } %>
+<div class="workshop-card">
+<h2 class="workshop-header">Workshop</h2>
+<% if (workshops.length > 0 && workshops[0].photo_url) { %>
+
+    <div class="workshop-banner">
+        <img src="<%= workshops[0].photo_url %>" 
+        alt="<%= workshops[0].workshop_name %>"
+        class="workshop-image">
+    </div>
+<% } %>
+    <div>
+        <% if (workshops.length > 0) { %>
+            <div class="workshop-list"></div>
+        <% workshops.forEach(workshop => { %> 
+                <h3 class="workshop-name"><%= workshop.workshop_name %></h3>
+                <p><b>City:</b> <%= city %></p> 
+                <p><b>Zipcode:</b> <%= zipcode %></p>
+                <p><b>Address:</b> <%= workshop.address %></p>
+                <p><b>Services:</b></p>
+                <ul class="services-list">
+                    <% workshop.services.forEach(service => { %>
+                        <li><%= service %></li>                    
+                    <% }) %>
+                </ul>
+    <% }) %>
+     </div>
+     <% } %>
+</div>
+    <a class="new-search" href="/workshops">New Search</a>

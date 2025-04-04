@@ -1,7 +1,11 @@
+
 <header id="top-header">
   <span class="siteName">
     <a href="/" title="Return to Home Page" class="CSEMotorsLink">CSE Motors</a>
   </span>
+  <div>
+       <a title="Click to log in" href="/workshops" class="MyAccountLink">Find a Workshop</a>
+  </div>
   <div id="tools">
     <% if (typeof loggedin !== 'undefined' && loggedin) { %>
       <% if (typeof accountData !== 'undefined' && accountData.account_firstname) { %>

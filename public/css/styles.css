@@ -358,18 +358,18 @@ input:required:valid {
 
 /*Flash message*/
 
-.notice-add-inventory, .notice li {
+.notice-add-inventory, .error, .notice li {
   list-style: none;
 }
 
-.notice-login, .notice-registration, .notice-add-classification, .notice-add-inventory, .notice{
+.notice-login, .notice-registration, .notice-add-classification, .notice-add-inventory, .error, .notice{
   background-color: bisque;
   padding: 20px;
   max-width: 550px;
   border-radius: 5px;
 }
 
-.notice-login, .notice-registration, .notice-add-classification, .notice-add-inventory, .notice li{
+.notice-login, .notice-registration, .notice-add-classification, .notice-add-inventory, .error, .notice li{
 font-family: Arial, Helvetica, sans-serif;
 font-size: 16px;
 max-width: max-content;
@@ -417,6 +417,81 @@ select, .detail{
 input[type="submit"] .register-button{
   cursor: pointer;
 }
+
+/*Workshop Section*/
+
+.workshop-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.workshop-name{
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 35px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.workshop-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  font-family: arial, sans-serif;
+}
+
+.workshop-header{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.2rem;
+  font-family: arial, sans-serif;
+  background-color: orange;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.workshop-banner{
+  text-align: center;
+}
+
+.services-list {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.services-list li {
+  margin-bottom: 4px;
+  list-style-type: disc;
+}
+.services-list li::before {
+  content: 🚗;
+  margin-right: 8px;
+}
+
+.new-search{
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #00aaff;
+  font-family: arial, sans-serif;
+  color: #333;
+  font-weight: bold;
+  max-width: 15%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
 
 /*Medium*/
 
